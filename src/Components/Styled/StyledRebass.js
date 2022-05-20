@@ -42,15 +42,15 @@ export const Form = () => {
 			<Flex>
 				<Label>
 					<Radio name="color" id="red" value="red" />
-					Red
+					Male
 				</Label>
 				<Label>
 					<Radio name="color" id="green" value="green" />
-					Green
+					Femal
 				</Label>
 				<Label>
 					<Radio name="color" id="blue" value="blue" />
-					Blue
+					Others
 				</Label>
 			</Flex>
 

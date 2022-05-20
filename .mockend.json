@@ -1,0 +1,27 @@
+{
+  "User": {
+    "FirstName": {
+      "string": {}
+    },
+    "LastName": {
+      "string": {}
+    },
+    "age": {
+      "int": {
+        "min": 21,
+        "max": 100
+      }
+    },
+    "Gender": {
+      "string": [
+        "Male",
+        "Female"
+      ]
+    },
+    "Height": {
+      "int": {
+        "min": 10,
+        "max": 3000
+      }
+  }
+}

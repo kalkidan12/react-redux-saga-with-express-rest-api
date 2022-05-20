@@ -9,82 +9,82 @@ import {
 	DELETE_USER_OK_SAGA,
 	GET_TO_EDIT_USER_SAGA,
 	GET_TO_DELETE_USER_SAGA,
-} from "./types";
-import store from "../store";
+} from "../ActionTypes/ActionTypes";
+import Store from "../Store";
 //actions
 
-function addUser(user) {
+const addUser = (user) => {
 	return { type: START_ADD_USER_SAGA, loading: true, payload: user };
-}
-function addUserOk() {
+};
+const addUserOk = () => {
 	return { type: ADD_USER_OK_SAGA, loading: false };
-}
+};
 
-function getAlluser() {
+const getAlluser = () => {
 	return { type: START_GET_USER_SAGA, loading: true, payload: [] };
-}
-function getAlluserOk(users) {
+};
+const getAlluserOk = (users) => {
 	return { type: GET_USER_OK_SAGA, payload: users, loading: false };
-}
+};
 
 //edit
-function getToEditUser(user) {
+const getToEditUser = (user) => {
 	return { type: GET_TO_EDIT_USER_SAGA, loading: true, payload: user };
-}
-function editUser(user) {
+};
+const editUser = (user) => {
 	return { type: START_EDIT_USER_SAGA, loading: true, payload: user };
-}
-function editUserOk() {
+};
+const editUserOk = () => {
 	return { type: EDIT_USER_OK_SAGA, loading: false, payload: {} };
-}
+};
 
 //delete
-function getToDeleteUser(user) {
+const getToDeleteUser = (user) => {
 	return { type: GET_TO_DELETE_USER_SAGA, loading: true, payload: user };
-}
-function deleteUser(user) {
+};
+const deleteUser = (user) => {
 	return { type: START_DELETE_USER_SAGA, loading: true, payload: user };
-}
-function deleteUserOk() {
+};
+const deleteUserOk = () => {
 	return { type: DELETE_USER_OK_SAGA, loading: false, payload: {} };
-}
+};
 
 //dispatching the actions
 //get
-export function getAlluserAction() {
-	store.dispatch(getAlluser());
-}
-export function getAlluserOkAction(users) {
-	store.dispatch(getAlluserOk(users));
-}
+export const getAlluserAction = () => {
+	Store.dispatch(getAlluser());
+};
+export const getAlluserOkAction = (users) => {
+	Store.dispatch(getAlluserOk(users));
+};
 
 //add
-export function addUserAction(user) {
-	store.dispatch(addUser(user));
-}
-export function addUserOKAction() {
-	store.dispatch(addUserOk());
-}
+export const addUserAction = (user) => {
+	Store.dispatch(addUser(user));
+};
+export const addUserOKAction = () => {
+	Store.dispatch(addUserOk());
+};
 
 //edit
-export function getToEditUserAction(user) {
-	store.dispatch(getToEditUser(user));
-}
-export function editUserAction(user) {
-	store.dispatch(editUser(user));
-}
+export const getToEditUserAction = (user) => {
+	Store.dispatch(getToEditUser(user));
+};
+export const editUserAction = (user) => {
+	Store.dispatch(editUser(user));
+};
 
-export function editUserOkAction(user) {
-	store.dispatch(editUserOk(user));
-}
+export const editUserOkAction = (user) => {
+	Store.dispatch(editUserOk(user));
+};
 
 //delete
-export function getToDeleteUserAction(user) {
-	store.dispatch(getToDeleteUser(user));
-}
-export function deleteUserAction(user) {
-	store.dispatch(deleteUser(user));
-}
-export function deleteUserOkAction() {
-	store.dispatch(deleteUserOk());
-}
+export const getToDeleteUserAction = (user) => {
+	Store.dispatch(getToDeleteUser(user));
+};
+export const deleteUserAction = (user) => {
+	Store.dispatch(deleteUser(user));
+};
+export const deleteUserOkAction = () => {
+	Store.dispatch(deleteUserOk());
+};

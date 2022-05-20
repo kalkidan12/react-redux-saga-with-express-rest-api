@@ -8,7 +8,7 @@ import {
 	START_DELETE_USER_SAGA,
 	DELETE_USER_OK_SAGA,
 	GET_TO_EDIT_USER_SAGA,
-} from "../action/types";
+} from "../ActionTypes/ActionTypes";
 
 const initialState = {
 	users: [],

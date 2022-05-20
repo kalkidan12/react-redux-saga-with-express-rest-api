@@ -1,4 +1,4 @@
-import axiosClient from "../config";
+import axiosClient from "./config";
 
 export function getAlluserApi() {
 	return axiosClient.get("user/all");

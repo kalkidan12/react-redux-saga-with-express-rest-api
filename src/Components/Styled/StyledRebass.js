@@ -1,74 +1,11 @@
 import React from "react";
-import { Text, Box, Card, Flex, Link } from "rebass";
-import { Label, Input, Select, Radio } from "@rebass/forms";
-import {
-	Button,
-	TableData,
-	TableHead,
-	TableRow,
-	TableLayout,
-} from "./StyledEmotion";
+import { Text, Box, Flex, Link } from "rebass";
 
-export const Form = () => {
-	return (
-		<Card>
-			<Label my={2} htmlFor="email">
-				First Name
-			</Label>
-			<Input
-				id="fname"
-				name="fname"
-				type="name"
-				placeholder="Enter First Name"
-			/>
-			<br></br>
-			<Label my={2} htmlFor="email">
-				Last Name
-			</Label>
-			<Input
-				id="lname"
-				name="name"
-				type="email"
-				placeholder="Enter Last Name"
-			/>
-			<br></br>
-			<Label my={2} htmlFor="email">
-				Age
-			</Label>
-			<Input id="age" name="age" type="number" placeholder="Enter Age" />
-			<Label my={2} htmlFor="email">
-				Gender
-			</Label>
-			<Flex>
-				<Label>
-					<Radio name="color" id="male" value="male" />
-					Male
-				</Label>
-				<Label>
-					<Radio name="color" id="female" value="female" />
-					Femal
-				</Label>
-				<Label>
-					<Radio name="color" id="others" value="others" />
-					Others
-				</Label>
-			</Flex>
-
-			<Label my={2} htmlFor="height">
-				Height
-			</Label>
-			<Input
-				id="height"
-				name="height"
-				type="number"
-				placeholder="Enter Height"
-			/>
-			<Button color="green">Add User</Button>
-		</Card>
-	);
-};
+import { useNavigate, useLocation } from "react-router-dom";
 
 export const NavBar = (props) => {
+	const navigate = useNavigate();
+	const location = useLocation();
 	return (
 		<>
 			<Flex
@@ -97,49 +34,14 @@ export const NavBar = (props) => {
 						cursor: "pointer",
 					}}
 				>
-					<Link to={props.to}>{props.name}</Link>
+					<Link
+						onClick={() => {
+							location.pathname === "/" ? navigate("/adduser") : navigate("/");
+						}}
+					>
+						{props.name}
+					</Link>
 				</Link>
-			</Flex>
-		</>
-	);
-};
-
-export const Table = () => {
-	return (
-		<>
-			<Flex
-				sx={{
-					maxWidth: 712,
-					mx: "auto",
-					px: 3,
-					py: 2,
-				}}
-			>
-				<TableLayout>
-					<TableHead>
-						<th>First Name</th>
-						<th>Last Name</th>
-						<th>Age</th>
-						<th>Gender</th>
-						<th>Height</th>
-						<th>Edit</th>
-						<th>Delete</th>
-					</TableHead>
-
-					<TableRow>
-						<TableData>Kalkidan</TableData>
-						<TableData>Kalkidan</TableData>
-						<TableData>Kalkidan</TableData>
-						<TableData>Kalkidan</TableData>
-						<TableData>Kalkidan</TableData>
-						<TableData>
-							<Button color="green">Edit</Button>
-						</TableData>
-						<TableData>
-							<Button color="red">Delete</Button>
-						</TableData>
-					</TableRow>
-				</TableLayout>
 			</Flex>
 		</>
 	);

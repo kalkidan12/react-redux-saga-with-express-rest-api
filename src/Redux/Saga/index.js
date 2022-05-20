@@ -4,19 +4,19 @@ import {
 	START_EDIT_USER_SAGA,
 	START_GET_USER_SAGA,
 	START_DELETE_USER_SAGA,
-} from "../action/types";
+} from "../ActionTypes/ActionTypes";
 import {
 	addUserApi,
 	getAlluserApi,
 	editUserApi,
 	deleteUserApi,
-} from "../api/index";
+} from "../../Service/services";
 import {
 	addUserOKAction,
 	deleteUserOkAction,
 	editUserOkAction,
 	getAlluserOkAction,
-} from "../action/actions";
+} from "../Actions/UserActions";
 
 //workers
 export function* getAlluserSaga() {
@@ -33,7 +33,6 @@ export function* addUserSage(action) {
 	const user = action.payload;
 	try {
 		yield call(addUserApi, user);
-		// console.log(res);
 		yield addUserOKAction(user);
 	} catch (error) {
 		yield console.log(error.message);
@@ -44,7 +43,6 @@ function* editUserSaga(action) {
 	const user = action.payload;
 	try {
 		yield editUserApi(user);
-		// console.log(res);
 		yield editUserOkAction();
 	} catch (error) {
 		yield console.log(error.message);
@@ -55,7 +53,6 @@ function* deleteUserSaga(action) {
 	const user = action.payload;
 	try {
 		yield deleteUserApi(user);
-		// console.log(res);
 		yield deleteUserOkAction();
 	} catch (error) {
 		yield console.log(error.message);

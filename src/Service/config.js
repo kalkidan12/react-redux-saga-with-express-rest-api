@@ -1,6 +1,6 @@
 import axios from "axios";
 const axiosClient = axios.create({
-	baseURL: "https://test-addissoftware-api.herokuapp.com/api/",
+	baseURL: "https://interndatabase.herokuapp.com/api",
 });
 
 export function capitalizeName(string) {

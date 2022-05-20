@@ -3,7 +3,7 @@ import { Table, NavBar } from "../Styled/StyledRebass";
 function ShowUser() {
 	return (
 		<>
-			<NavBar name="Add User" />
+			<NavBar to="/adduser" name="Add User" />
 			<Table />
 		</>
 	);

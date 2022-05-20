@@ -7,7 +7,7 @@ import { NavBar, Form } from "../Styled/StyledRebass";
 export default function AddUser() {
 	return (
 		<>
-			<NavBar to="/adduser" name="Cancel Add" />
+			<NavBar to="/" name="Cancel Add" />
 			<Box
 				alignItems="center"
 				sx={{

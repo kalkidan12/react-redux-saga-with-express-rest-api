@@ -5,7 +5,7 @@ import { Box } from "rebass";
 function EditUser() {
 	return (
 		<>
-			<NavBar name="Cancel Edit" />
+			<NavBar to="/" name="Cancel Edit" />
 			<Box
 				alignItems="center"
 				sx={{

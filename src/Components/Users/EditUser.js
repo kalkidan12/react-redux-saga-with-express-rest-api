@@ -1,10 +1,11 @@
 import React from "react";
 import { Heading } from "rebass";
-import { Form } from "../Styled/StyledRebass";
+import { Form, NavBar } from "../Styled/StyledRebass";
 import { Box } from "rebass";
 function EditUser() {
 	return (
 		<>
+			<NavBar name="Cancel Edit" />
 			<Box
 				alignItems="center"
 				sx={{

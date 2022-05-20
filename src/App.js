@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
 	return (
 		<>
-			<NavBar />
 			<Router>
 				<Routes>
 					<Route path="/adduser" exact element={<AddUser />} />

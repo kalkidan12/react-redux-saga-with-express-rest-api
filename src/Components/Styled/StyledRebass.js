@@ -68,11 +68,11 @@ export const Form = () => {
 	);
 };
 
-export const NavBar = (title) => {
+export const NavBar = (props) => {
 	return (
 		<>
 			<Flex
-				py={2}
+				py={3}
 				px={0}
 				color="white"
 				bg="green"
@@ -97,7 +97,7 @@ export const NavBar = (title) => {
 						cursor: "pointer",
 					}}
 				>
-					Add User
+					<Link>{props.name}</Link>
 				</Link>
 				<Link variant="nav" href="#!"></Link>
 			</Flex>

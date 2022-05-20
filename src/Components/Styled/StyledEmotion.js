@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 export const Button = styled.button`
 	background-color: ${(props) => props.color};
 	color: white;
+
 	padding: 10px;
 	border: none;
 	cursor: pointer;
@@ -11,6 +12,10 @@ export const Button = styled.button`
 	border-radius: 5px;
 	font-weight: bold;
 	font-size: 18;
+`;
+export const A = styled.a`
+	text-decoration: none;
+	color: white;
 `;
 export const TableLayout = styled.table`
 	font-family: arial, sans-serif;

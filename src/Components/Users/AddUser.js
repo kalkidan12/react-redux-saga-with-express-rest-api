@@ -1,14 +1,13 @@
-import { Box, Flex } from "rebass";
+import { Box, Flex, Heading } from "rebass";
 import { Label, Input, Radio } from "@rebass/forms";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { Button } from "../Common";
-
+import { NavBar, Form } from "../Styled/StyledRebass";
 export default function AddUser() {
 	return (
 		<>
-			<NavBar name="Cancel Edit" />
+			<NavBar to="/adduser" name="Cancel Add" />
 			<Box
 				alignItems="center"
 				sx={{

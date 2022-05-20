@@ -41,15 +41,15 @@ export const Form = () => {
 			</Label>
 			<Flex>
 				<Label>
-					<Radio name="color" id="red" value="red" />
+					<Radio name="color" id="male" value="male" />
 					Male
 				</Label>
 				<Label>
-					<Radio name="color" id="green" value="green" />
+					<Radio name="color" id="female" value="female" />
 					Femal
 				</Label>
 				<Label>
-					<Radio name="color" id="blue" value="blue" />
+					<Radio name="color" id="others" value="others" />
 					Others
 				</Label>
 			</Flex>
@@ -97,9 +97,8 @@ export const NavBar = (props) => {
 						cursor: "pointer",
 					}}
 				>
-					<Link>{props.name}</Link>
+					<Link to={props.to}>{props.name}</Link>
 				</Link>
-				<Link variant="nav" href="#!"></Link>
 			</Flex>
 		</>
 	);
